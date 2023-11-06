@@ -14,16 +14,14 @@ struct BarView: View {
     
     var body: some View {
         VStack{
-            ZStack(alignment: .bottomTrailing){
-                Capsule().frame(width: 30,height: 200)
-                    .foregroundStyle(Color.white)
-                Capsule().frame(width: 30,height: value)
-                    .foregroundStyle(Color.green)
-                
-                
-                
+            ZStack(alignment:.bottomTrailing){
+                Capsule()
+                    .frame(width: 30,height: 200)
+                    .foregroundStyle(.white)
+                Capsule()
+                    .frame(width: 30,height: value)
+                    .foregroundStyle(.green)
             }
-           
             Text(name)
         }
     }

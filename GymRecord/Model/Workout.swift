@@ -9,7 +9,14 @@ import Foundation
 
 class Workout: Codable,Identifiable {
     var id:String
-    var squart : Int
-    var benchPress : Int
-    var DeadLift : Int
+    var squart : CGFloat
+    var benchPress : CGFloat
+    var DeadLift : CGFloat
+    
+    init(squart: CGFloat, benchPress: CGFloat, DeadLift: CGFloat) {
+        self.id = UUID().uuidString
+        self.squart = squart
+        self.benchPress = benchPress
+        self.DeadLift = DeadLift
+    }
 }

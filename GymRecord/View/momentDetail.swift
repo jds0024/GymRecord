@@ -12,7 +12,11 @@ struct momentDetail: View {
     var moment: String
     
     var body: some View {
+        
         Text("df")
+        
+        
+        
     }
 }
 
