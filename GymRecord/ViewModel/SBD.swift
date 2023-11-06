@@ -45,7 +45,7 @@ struct SBD: View {
             Spacer()
             
                                     
-            Button(action: { sbd[0].append(CGFloat(Int(addTxt)!))}, label: {
+            Button(action: { sbd[name].append(CGFloat(Int(addTxt)!))}, label: {
                 Text("+")
                     .font(.system(size: 30))
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
