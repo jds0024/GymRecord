@@ -10,10 +10,12 @@ import SwiftUI
 @main
 struct GymRecordApp: App {
     let eatTimeCPFK = EatTimeCPFK()
+    let sbdRecord = SBDRecord()
     
     var body: some Scene {
         WindowGroup {
             MainView().environmentObject(EatTimeCPFK())
+                .environmentObject(SBDRecord())
         }
     }
 }

@@ -10,7 +10,7 @@ import SwiftUI
 struct BarView: View {
     var value: CGFloat
     var name: String
-    
+    @Binding var num: CGFloat
     
     var body: some View {
         VStack{
@@ -18,15 +18,19 @@ struct BarView: View {
                 Capsule()
                     .frame(width: 30,height: 200)
                     .foregroundStyle(.white)
-                Capsule()
-                    .frame(width: 30,height: value)
-                    .foregroundStyle(.green)
+                ZStack(alignment:.top){
+                    Capsule()
+                        .frame(width: 30,height: value)
+                        .foregroundStyle(.green)
+                    Text("\(Int(num))")
+                }
+                
             }
             Text(name)
         }
     }
 }
 
-#Preview {
-    BarView(value: 100, name: "BenchPress")
-}
+//#Preview {
+//    BarView(value: 100, name: "BenchPress",num: .constant(10))
+//}

@@ -11,7 +11,7 @@ struct WorkoutGraph: View {
     
     @State var pickerSelected = 0
     
-    @Binding var SBD :[[CGFloat]]
+    @EnvironmentObject var SBD: SBDRecord
     
     var pickerTxt = ["0","1","2","3","4","5","6"]
     
@@ -36,8 +36,8 @@ struct WorkoutGraph: View {
             
             ScrollView(.horizontal){
                 HStack(spacing: 20){
-                    ForEach(0..<SBD[pickerSelected].count,id:\.self){
-                        BarView(value: SBD[pickerSelected][$0], name: "\($0+1)")
+                    ForEach(0..<SBD.sbd[pickerSelected].count,id:\.self){
+                        BarView(value: SBD.sbd[pickerSelected][$0], name: "\($0+1)",num:  $SBD.sbd[pickerSelected][$0])
                         
                     }
 
@@ -55,9 +55,5 @@ struct WorkoutGraph: View {
 }
 
 #Preview {
-    WorkoutGraph(SBD: .constant([
-        [50,30,180,100,70,60,20,100,200],
-        [10,60,40,150,100,80,100,150,200],
-        [20,60,100,150,30,150,73,85,100],
-        ]))
+    WorkoutGraph().environmentObject(SBDRecord())
 }

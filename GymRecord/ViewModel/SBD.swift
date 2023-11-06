@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct SBD: View {
-    @Binding var sbd :[[CGFloat]]
+    @EnvironmentObject var sbd: SBDRecord
     @State var addTxt = ""
     var name: Int
     
@@ -45,7 +45,7 @@ struct SBD: View {
             Spacer()
             
                                     
-            Button(action: { sbd[name].append(CGFloat(Int(addTxt)!))}, label: {
+            Button(action: { sbd.sbd[name].append(CGFloat(Int(addTxt)!))}, label: {
                 Text("+")
                     .font(.system(size: 30))
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
@@ -63,9 +63,5 @@ struct SBD: View {
 }
 
 #Preview {
-    SBD(sbd: .constant( [
-        [50,30,180,100,70,60,20,100,200],
-        [10,60,40,150,100,80,100,150,200],
-        [20,60,100,150,30,150,73,85,100],
-        ]),name: 0)
+    SBD(name: 1).environmentObject(SBDRecord())
 }
