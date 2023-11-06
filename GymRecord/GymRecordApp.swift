@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct GymRecordApp: App {
+    let eatTimeCPFK = EatTimeCPFK()
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            MainView().environmentObject(EatTimeCPFK())
         }
     }
 }
