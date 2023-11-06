@@ -51,7 +51,8 @@ struct CPTK: View {
                 }
             
             .padding()
-        }
+        }.background(Color.white)
+            .cornerRadius(20)
         
         
         

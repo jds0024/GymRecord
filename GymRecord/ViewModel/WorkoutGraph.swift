@@ -10,11 +10,9 @@ import SwiftUI
 struct WorkoutGraph: View {
     
     @State var pickerSelected = 0
-    @State var SBD :[[CGFloat]] = [
-    [50,30,180,100,70,60,20,100,200],
-    [10,60,40,150,100,80,100,150,200],
-    [20,60,100,150,30,150,73,85,100],
-    ]
+    
+    @Binding var SBD :[[CGFloat]]
+    
     var pickerTxt = ["0","1","2","3","4","5","6"]
     
     
@@ -38,15 +36,11 @@ struct WorkoutGraph: View {
             
             ScrollView(.horizontal){
                 HStack(spacing: 20){
-                    BarView(value: SBD[pickerSelected][0], name: "1")
-                    BarView(value: SBD[pickerSelected][1], name: "2")
-                    BarView(value: SBD[pickerSelected][2], name: "3")
-                    BarView(value: SBD[pickerSelected][3], name: "4")
-                    BarView(value: SBD[pickerSelected][4], name: "5")
-                    BarView(value: SBD[pickerSelected][5], name: "6")
-                    BarView(value: SBD[pickerSelected][6], name: "7")
-                    BarView(value: SBD[pickerSelected][7], name: "8")
-                    BarView(value: SBD[pickerSelected][8], name: "9")
+                    ForEach(0..<SBD[pickerSelected].count,id:\.self){
+                        BarView(value: SBD[pickerSelected][$0], name: "\($0+1)")
+                        
+                    }
+
                 }
                 .animation(.default)
             }
@@ -61,5 +55,9 @@ struct WorkoutGraph: View {
 }
 
 #Preview {
-    WorkoutGraph()
+    WorkoutGraph(SBD: .constant([
+        [50,30,180,100,70,60,20,100,200],
+        [10,60,40,150,100,80,100,150,200],
+        [20,60,100,150,30,150,73,85,100],
+        ]))
 }

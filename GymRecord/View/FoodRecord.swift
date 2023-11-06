@@ -25,6 +25,9 @@ struct FoodRecord: View {
             
             
             VStack {
+                Rectangle()
+                    .frame(height: 0)
+                
             Spacer()
                 CPTK(carb:  (eatTimeCPFK.morning["C"]! +
                             eatTimeCPFK.lunch["C"]! +
@@ -42,12 +45,13 @@ struct FoodRecord: View {
                 
                 .background(Color.white)
                 .cornerRadius(11)
+                
                
                 
                 NavigationLink(destination:momentDetail(moment: "아침")){
                     Morning(moment: "아침")
-                        .background(.white)
-                        .cornerRadius(11)
+                       
+                        
                 }
                 
                     
@@ -55,14 +59,13 @@ struct FoodRecord: View {
                 NavigationLink(destination:momentDetail(moment: "점심")){
                     Morning(moment: "점심")
                 }
-                        .background(.white)
-                        .cornerRadius(11)
+                        
+                        
                     
                     .padding()
                 NavigationLink(destination:momentDetail(moment: "저녁")){
                     Morning(moment: "저녁")
-                        .background(.white)
-                        .cornerRadius(11)
+                        
                     
                 }
                         .padding()

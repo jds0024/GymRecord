@@ -18,29 +18,29 @@ struct Morning: View {
             HStack{
                 Spacer()
                 Text(moment)
-                    .font(.system(size: 20))
+                    .font(.system(size: 30))
                     .fontWeight(.bold)
                     .foregroundStyle(Color.black)
                 Spacer()
                 if moment == "아침"{
                     Text("\(morning.morning["K"]!)")
-                        .font(.system(size: 20))
+                        .font(.system(size: 30))
                         .fontWeight(.bold)
                         .foregroundStyle(Color.black)
                         
                 }else if moment == "점심"{
                     Text("\(morning.lunch["K"]!)")
-                        .font(.system(size: 20))
+                        .font(.system(size: 30))
                         .fontWeight(.bold)
                         .foregroundStyle(Color.black)
                 }else{
                     Text("\(morning.dinner["K"]!)")
-                        .font(.system(size: 20))
+                        .font(.system(size: 30))
                         .fontWeight(.bold)
                         .foregroundStyle(Color.black)
                 }
                 Text("Kcal")
-                    .font(.system(size: 20))
+                    .font(.system(size: 30))
                     .fontWeight(.bold)
                     .foregroundStyle(Color.black)
                 Spacer()
@@ -49,10 +49,15 @@ struct Morning: View {
                 NavigationLink(destination: FoodPlus(moment: moment)){
                     Text("+")
                         .font(.system(size: 30))
+                    
                         
                 }
+                Spacer()
             }
             .padding()
+            .frame(width: 350 ,height: 80)
+            .background(.white)
+            .cornerRadius(20)
             
         }
         

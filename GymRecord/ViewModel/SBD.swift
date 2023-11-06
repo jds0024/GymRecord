@@ -8,18 +8,44 @@
 import SwiftUI
 
 struct SBD: View {
+    @Binding var sbd :[[CGFloat]]
+    @State var addTxt = ""
+    var name: Int
+    
+    
+    
     var body: some View {
         HStack{
             Spacer()
-            Text("S")
-                .font(.system(size: 30))
-                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+            if name == 0 {
+                Text("S")
+                    .font(.system(size: 30))
+                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+            }else if name == 1{
+                Text("B")
+                    .font(.system(size: 30))
+                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+            }else {
+                Text("D")
+                    .font(.system(size: 30))
+                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+            }
             Spacer()
-            Text("200KG")
-                .font(.system(size: 30))
-                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+            HStack(alignment:.center){
+                TextField("무게", text: $addTxt)
+                    .padding()
+                    .font(.system(size: 30))
+                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                    .frame(width: 100)
+                    
+                Text("kg")
+                    .font(.system(size: 30))
+                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+            }
             Spacer()
-            Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
+            
+                                    
+            Button(action: { sbd[0].append(CGFloat(Int(addTxt)!))}, label: {
                 Text("+")
                     .font(.system(size: 30))
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
@@ -37,5 +63,9 @@ struct SBD: View {
 }
 
 #Preview {
-    SBD()
+    SBD(sbd: .constant( [
+        [50,30,180,100,70,60,20,100,200],
+        [10,60,40,150,100,80,100,150,200],
+        [20,60,100,150,30,150,73,85,100],
+        ]),name: 0)
 }

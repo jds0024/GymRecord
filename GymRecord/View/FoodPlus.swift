@@ -30,6 +30,7 @@ struct FoodPlus: View {
                      protein: eatTimeCPFK.morning["P"]!,
                      fat: eatTimeCPFK.morning["F"]!,
                      kcal: eatTimeCPFK.morning["K"]!)
+                
             }else if moment == "점심"{
                 CPTK(carb: eatTimeCPFK.lunch["C"]!,
                      protein: eatTimeCPFK.lunch["P"]!,
@@ -88,9 +89,11 @@ struct FoodPlus: View {
                                 })
                                 
                             }//HStack
+                            
                         
                         
                     }//forEach
+                    
                     
                     .onMove(perform: { indices, newOffset in
                         foodStore.foods.move(fromOffsets: indices, toOffset: newOffset)
@@ -100,9 +103,12 @@ struct FoodPlus: View {
                     })
                 }//L
                 .toolbar{EditButton()}
+                
             
         }//V
+        .background(.blue)
       }
+        
     }
 }
 
