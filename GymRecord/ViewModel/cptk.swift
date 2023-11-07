@@ -18,16 +18,23 @@ struct CPTK: View {
     var body: some View {
         HStack{
             VStack{
-                Text("Carb")
-                    .font(.system(size: 25))
-                    .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
-                    .padding(.vertical,5)
-                Text("\(carb)g")
+                
+                    
+//                    Circle().stroke(Color.yellow,lineWidth:10 )
+                    
+                        Text("Carb")
+                            .font(.system(size: 22))
+                            .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                            .padding(.vertical,5)
+                        Text("\(carb)g")
+                    
+                
+                
                 }
             .padding()
             VStack{
                 Text("protein")
-                    .font(.system(size: 25))
+                    .font(.system(size: 22))
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                     .padding(.vertical,5)
                 Text("\(protein)g")
@@ -35,7 +42,7 @@ struct CPTK: View {
             .padding()
             VStack{
                 Text("fat")
-                    .font(.system(size: 25))
+                    .font(.system(size: 22))
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                     .padding(.vertical,5)
                 Text("\(fat)g")
@@ -43,7 +50,7 @@ struct CPTK: View {
             .padding()
             VStack{
                 Text("Kcal")
-                    .font(.system(size: 25))
+                    .font(.system(size: 22))
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                     .padding(.vertical,5)
                 Text("\(kcal)kcal")

@@ -19,3 +19,7 @@ struct GymRecordApp: App {
         }
     }
 }
+// 그래프에 1,2,3,4,5, 날짜로 바꾸기
+//식단 날짜별로 기록
+//식단 그래프 추가
+//momentDeatil 구현

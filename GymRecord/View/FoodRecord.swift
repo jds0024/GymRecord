@@ -25,10 +25,17 @@ struct FoodRecord: View {
             
             
             VStack {
+                Text("식단기록")
+                    .font(.system(size: 35))
+                    .fontWeight(.medium)
+                    .padding()
+                CPFKGraph()
+                    .padding()
+                
                 Rectangle()
                     .frame(height: 0)
                 
-            Spacer()
+           
                 CPTK(carb:  (eatTimeCPFK.morning["C"]! +
                             eatTimeCPFK.lunch["C"]! +
                             eatTimeCPFK.dinner ["C"]!),
