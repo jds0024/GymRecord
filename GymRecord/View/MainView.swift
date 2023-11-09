@@ -18,38 +18,34 @@ struct MainView: View {
     var body: some View {
 
           
-            
-                TabView {
-                    
-                    FoodRecord()
+        
+            TabView {
+                
+                FoodRecord()
+                    .tabItem {
+                        Image(systemName: "fork.knife")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/,height: 100)
+                            }
+                WorkOutRecord()
+                    .tabItem {
+                        Image(systemName: "dumbbell")
                         
-                        
-                        .tabItem {
-                            Image(systemName: "fork.knife")
-                                .resizable()
-                                .scaledToFit()
-                                .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/,height: 100)
-                                
-                            
-                            
-                        }
-                        
-                    
-                    
-                    WorkOutRecord()
-                        .tabItem {
-                            Image(systemName: "dumbbell")
-                            
-                        }
-                    
-                }
-                .accentColor(.black)
-       
+                    }
+                MyPage()
+                    .tabItem {
+                        Image(systemName: "person.crop.circle.fill")
+                    }
+                
+            }
+            .accentColor(.black)
+        }
                 
                 
             
         }
-    }
+    
 
 
 #Preview {

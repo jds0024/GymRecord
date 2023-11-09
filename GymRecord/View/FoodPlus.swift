@@ -102,11 +102,14 @@ struct FoodPlus: View {
                         foodStore.foods.remove(atOffsets: indexSet)
                     })
                 }//L
+                .listStyle(InsetListStyle())
                 .toolbar{EditButton()}
+                
                 
             
         }//V
-        .background(.blue)
+        
+        
       }
         
     }

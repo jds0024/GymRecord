@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Charts
 
 struct WorkoutGraph: View {
     
@@ -44,6 +45,14 @@ struct WorkoutGraph: View {
                 }
                 .animation(.default)
             }
+           
+                
+                
+               
+            
+            
+            
+            
             
         }.background(.blue)
         

@@ -27,6 +27,7 @@ struct CPTK: View {
                             .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                             .padding(.vertical,5)
                         Text("\(carb)g")
+                    .animation(.default)
                     
                 
                 
@@ -38,6 +39,7 @@ struct CPTK: View {
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                     .padding(.vertical,5)
                 Text("\(protein)g")
+                    .animation(.default)
                 }
             .padding()
             VStack{
@@ -46,6 +48,7 @@ struct CPTK: View {
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                     .padding(.vertical,5)
                 Text("\(fat)g")
+                    .animation(.default)
                 }
             .padding()
             VStack{
@@ -53,13 +56,16 @@ struct CPTK: View {
                     .font(.system(size: 22))
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                     .padding(.vertical,5)
+                    
                 Text("\(kcal)kcal")
+                    .animation(.default)
                     
                 }
             
             .padding()
         }.background(Color.white)
             .cornerRadius(20)
+            
         
         
         

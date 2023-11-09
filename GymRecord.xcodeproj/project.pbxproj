@@ -21,6 +21,7 @@
 		6048BAC82AF98D45005310F6 /* SBDRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6048BAC72AF98D45005310F6 /* SBDRecord.swift */; };
 		6048BACA2AF995EC005310F6 /* CPFKGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6048BAC92AF995EC005310F6 /* CPFKGraph.swift */; };
 		6048BACC2AF99728005310F6 /* BarView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6048BACB2AF99728005310F6 /* BarView2.swift */; };
+		60650A452AFBFC2E00CEBC27 /* MyPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60650A442AFBFC2E00CEBC27 /* MyPage.swift */; };
 		607AE4C02AF931A30079836E /* WorkOutReocdRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607AE4BF2AF931A30079836E /* WorkOutReocdRecord.swift */; };
 		607AE4C22AF931D80079836E /* Workout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607AE4C12AF931D80079836E /* Workout.swift */; };
 		607AE4C42AF932A00079836E /* WorkoutGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607AE4C32AF932A00079836E /* WorkoutGraph.swift */; };
@@ -48,6 +49,7 @@
 		6048BAC72AF98D45005310F6 /* SBDRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SBDRecord.swift; sourceTree = "<group>"; };
 		6048BAC92AF995EC005310F6 /* CPFKGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CPFKGraph.swift; sourceTree = "<group>"; };
 		6048BACB2AF99728005310F6 /* BarView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarView2.swift; sourceTree = "<group>"; };
+		60650A442AFBFC2E00CEBC27 /* MyPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPage.swift; sourceTree = "<group>"; };
 		607AE4BF2AF931A30079836E /* WorkOutReocdRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkOutReocdRecord.swift; sourceTree = "<group>"; };
 		607AE4C12AF931D80079836E /* Workout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Workout.swift; sourceTree = "<group>"; };
 		607AE4C32AF932A00079836E /* WorkoutGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkoutGraph.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				60F3C9C32AF66B2000E570C9 /* WorkOutRecord.swift */,
 				60F3C9CD2AF69BBE00E570C9 /* MainView.swift */,
 				607DD9312AF7E86F00AD4D3D /* momentDetail.swift */,
+				60650A442AFBFC2E00CEBC27 /* MyPage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -239,6 +242,7 @@
 				607AE4C62AF934FF0079836E /* SBD.swift in Sources */,
 				60228A172AF6115500631334 /* Morning.swift in Sources */,
 				60228A152AF60E8B00631334 /* cptk.swift in Sources */,
+				60650A452AFBFC2E00CEBC27 /* MyPage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

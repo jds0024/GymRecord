@@ -12,7 +12,7 @@ struct CPFKGraph: View {
     @EnvironmentObject var eatTimeCPFK : EatTimeCPFK
     
     var body: some View {
-        VStack{
+        VStack(){
             BarView2(cpfk: "C",value: CGFloat(eatTimeCPFK.morning["C"]! +
                                               eatTimeCPFK.lunch["C"]! +
                                               eatTimeCPFK.dinner ["C"]!))

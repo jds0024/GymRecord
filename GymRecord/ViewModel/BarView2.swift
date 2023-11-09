@@ -12,14 +12,17 @@ struct BarView2: View {
     var cpfk: String
     var value: CGFloat
     var body: some View {
-        HStack(alignment: .top){
+        HStack(){
             Text(cpfk)
             ZStack(alignment:.leading){
                 Capsule().frame(width: 300,height: 30)
                     .foregroundColor(.white)
-                Capsule().frame(width:value ,height: 30)
-                    .foregroundColor(.green)
-                    .animation(.default)
+                HStack{
+                    Capsule().frame(width:value ,height: 30)
+                        .foregroundColor(.green)
+                        .animation(.default)
+                    Text(String(Int(value)))
+                }
             }
             
         }
